@@ -1,0 +1,6 @@
+package wasi:cli@0.2.0;
+
+world imports {
+  include wasi:sockets/imports@0.2.0;
+  include wasi:io/imports@0.2.0;
+}

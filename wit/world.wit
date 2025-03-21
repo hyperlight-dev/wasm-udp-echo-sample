@@ -1,0 +1,5 @@
+package yoshuawuyts:wasm-udp-echo-sample;
+
+world target-world {
+  include wasi:cli/command@0.2.0;
+}
