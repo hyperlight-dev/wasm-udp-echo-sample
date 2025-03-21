@@ -1,0 +1,23 @@
+[package]
+name = "udp-echo-server"
+version = "0.1.0"
+edition = "2021"
+authors = ["Yosh Wuyts <pub@yosh.is>"]
+description = "A sample UDP echo server for Wasm"
+documentation = "https://github.com/yoshuawuyts/wasm-udp-echo-sample"
+
+[package.metadata.component]
+package = "component:udp-echo-server"
+
+[package.metadata.component.dependencies]
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wit-bindgen-rt = { version = "0.41.0", features = ["bitflags"] }
+
+[package.metadata.component.target.dependencies]
+"wasi:io" = { path = "wit/deps/io" }
+"wasi:cli" = { path = "wit/deps/cli" }
+"wasi:sockets" = { path = "wit/deps/sockets" }
